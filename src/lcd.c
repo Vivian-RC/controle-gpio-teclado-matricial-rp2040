@@ -51,3 +51,25 @@ void lcd_string(const char* str) {
         lcd_send_byte(*str++, 1);
     }
 }
+
+// Função para atualizar a tela com a sequência de teclas
+void atualizar_lcd(const char *sequencia, uint8_t indice) {
+    lcd_set_cursor(0, 0);  // Coloca o cursor no início da linha
+    lcd_string("");
+
+    // Se a sequência ultrapassar 16 caracteres, move para a linha seguinte
+    if (indice < 16) {
+        lcd_string(sequencia);  // Exibe a sequência na primeira linha
+    } else {
+        lcd_set_cursor(1, 0);  // Move para a linha seguinte
+        lcd_string(sequencia + 16);  // Exibe a sequência continuada na segunda linha
+    }
+}
+
+// Função para limpar apenas a linha do display onde está a sequência
+void limpar_linha(int linha) {
+    lcd_set_cursor(linha, 0);  // Mover para o início da linha
+    for (int i = 0; i < 16; i++) {  // Limpar até 16 caracteres
+        lcd_send_byte(' ', 1);
+    }
+}

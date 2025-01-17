@@ -23,4 +23,10 @@ void lcd_init();
 void lcd_set_cursor(int row, int col);
 void lcd_string(const char* str);
 
+// Atualiza o LCD com uma sequência de teclas
+void atualizar_lcd(const char *sequencia, uint8_t indice);
+
+// Limpa uma linha específica do LCD
+void limpar_linha(int linha);
+
 #endif
