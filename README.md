@@ -6,7 +6,9 @@ Este projeto tem como objetivo implementar o controle de pinos GPIO utilizando u
 
 Segue o link do vídeo dos resultados obtidos durante a simulação:
 
-[Vídeo de Simulação](https://www.youtube.com.br/)
+[Assista ao vídeo demonstrativo. Clique aqui!](https://youtu.be/ST_PZCVfq7c)
+
+
 
 ---
 
