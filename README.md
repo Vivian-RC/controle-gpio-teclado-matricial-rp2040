@@ -13,8 +13,6 @@ Segue o link do vídeo dos resultados obtidos durante a simulação:
 ---
 
 ## Tabela de Conteúdos
-
-- [Projeto: Controle de Pinos GPIO com Teclado Matricial 4x4](#projeto-controle-de-pinos-gpio-com-teclado-matricial-4x4)
   - [Estrutura do Repositório](#estrutura-do-repositório)
   - [Como Rodar o Projeto](#como-rodar-o-projeto)
   - [Simulação no Wokwi:](#simulação-no-wokwi)
@@ -102,9 +100,9 @@ ninja --version
    rmdir /s /q build
    mkdir build
    cd build
-  ````
+
 3. Configure o projeto com o CMake:
-  ```bash
+ ```bash
    cmake -G Ninja ..
   ````
 4. Compile o projeto:
