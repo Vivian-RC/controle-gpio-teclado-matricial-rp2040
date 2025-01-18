@@ -64,22 +64,56 @@ Para rodar o projeto localmente, siga os seguintes passos:
 cd controle-gpio-teclado-matricial-rp2040
 ````
 
-3. Configuração do Ambiente de Desenvolvimento:
+# Instruções para Configuração e Compilação do Projeto
 
-    Utilize o CMake ou o Makefile para compilar o código:
+## Passo 1: Baixar o Ninja
+1. Acesse a página oficial de releases do Ninja:  
+   [Ninja Releases no GitHub](https://github.com/ninja-build/ninja/releases).
+2. Baixe o arquivo binário mais recente para Windows (geralmente um `.zip`).
+3. Extraia o conteúdo do arquivo `.zip` (haverá um arquivo `ninja.exe`).
 
-- Para CMake:
+---
+
+## Passo 2: Adicionar o Ninja ao Path do sistema
+Para que o `ninja` seja reconhecido como um comando em qualquer terminal, siga estas etapas:
+
+1. Clique com o botão direito no botão **Iniciar** e selecione **Configurações**.
+2. Vá em **Sistema** → **Sobre** → **Configurações avançadas do sistema** (no lado direito).
+3. Na aba **Avançado**, clique em **Variáveis de Ambiente**.
+4. Na seção **Variáveis do Sistema**, localize a variável `Path` e clique em **Editar**.
+5. Clique em **Novo** e adicione o caminho completo para o diretório onde você extraiu o `ninja.exe`. Por exemplo:
 ````
-mkdir build
-cd build
-cmake ..
-make
+C:\Users\SeuUsuario\Downloads\ninja-win
+````
+6. Clique em **OK** em todas as janelas.
+
+---
+
+## Passo 3: Verificar se o Ninja está funcionando
+1. Abra um terminal (PowerShell ou Prompt de Comando).
+2. Digite o comando abaixo para verificar a instalação:
+```bash
+ninja --version
 ````
 
-- Para Makefile:
+## Passo 4: Configurar e Compilar o Projeto
+
+1. Volte ao diretório do projeto e abra um terminal.
+2. Crie ou limpe a pasta `build`:
+   ```bash
+   rmdir /s /q build
+   mkdir build
+   cd build
+  ````
+3. Configure o projeto com o CMake:
 ````
-make
+cmake -G Ninja ..
 ````
+4. Compile o projeto:
+````
+ninja
+````
+5. Após isso, o arquivo main.elf será gerado na pasta build.
 
 ## Simulação no Wokwi:
 
