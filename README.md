@@ -15,8 +15,6 @@ Segue o link do vídeo dos resultados obtidos durante a simulação:
 ## Tabela de Conteúdos
 
 - [Projeto: Controle de Pinos GPIO com Teclado Matricial 4x4](#projeto-controle-de-pinos-gpio-com-teclado-matricial-4x4)
-  - [Vídeo da Prática](#vídeo-da-prática)
-  - [Tabela de Conteúdos](#tabela-de-conteúdos)
   - [Estrutura do Repositório](#estrutura-do-repositório)
   - [Como Rodar o Projeto](#como-rodar-o-projeto)
   - [Simulação no Wokwi:](#simulação-no-wokwi)
@@ -106,13 +104,15 @@ ninja --version
    cd build
   ````
 3. Configure o projeto com o CMake:
-````
-cmake -G Ninja ..
-````
+  ```bash
+   cmake -G Ninja ..
+  ````
 4. Compile o projeto:
-````
-ninja
-````
+
+  ```bash
+   ninja
+  ````
+
 5. Após isso, o arquivo main.elf será gerado na pasta build.
 
 ## Simulação no Wokwi:
